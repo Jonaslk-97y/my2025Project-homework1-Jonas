@@ -6,6 +6,9 @@ export function useAxiosGet<T>(url: string, transform: (json: T) => T, payload: 
     const [error, setError] = useState("");
     const [loaded, setLoaded] = useState(false);
 
+    // Fetch data from the given URL using axios
+    // and transform it using the provided transform function.
+
     useEffect(() => {
         axios
             .get(url, payload)
